@@ -1,0 +1,4 @@
+FROM openjdk:11
+COPY "./target/hermandad-0.0.1-SNAPSHOT.jar" "app.jar"
+EXPOSE 8080
+entrypoint ["java", "-jar","app.jar", "-web -webAllowOthers -tcp -tcpAllowOthers -browser"]  
